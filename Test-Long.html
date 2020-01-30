@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_zemlje.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <title>TestLong</title>
+
+</head>
+
+<body>
+    <div class="hero-container">
+      <div class="hero-image-area">
+        <div class="hero-text-area">
+          <h1>World Countries Generator</h1>
+  
+          <div class="countCntr">
+            <p>Total number of countries in the library: </p>
+            <input class="headerNumber" type: readonly>
+  
+            <button class="sortBtn" type="button">Sort
+              <i class="fas fa-sort-alpha-up"></i>
+  
+          </div>
+  
+  
+          <div class="input_wrapper">
+            <input class="input" type="text" name="" placeholder="Search by any word " />
+            <button class="searchbtn" type="search">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="input_wrapper">
+            <input class="input1" type="text" name="" value='' placeholder="Search by first letters" />
+            <button class="searchbtn1" type="search">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+  
+  
+          <div class="countries-sort__paragraph">
+            <div class="flex-container"></div>
+  
+
+<script>
+
+console.log(countries.length)
+      const headNum = document.querySelector('.headerNumber')
+      const flexContainer = document.querySelector('.flex-container')
+      const searchBtn = document.querySelector('.searchbtn')
+      const inputArea = document.querySelector('.input')
+      const countriesSortedParagraph = document.querySelector('.countries-sort__paragraph')
+      const searchBtn1 = document.querySelector('.searchbtn1')
+      const inputLetter = document.querySelector('.input1')
+      const sortbtn = document.querySelector('.sortBtn')
+
+  const flexContainer = document.querySelector('.flex-container')
+        const url = "https://restcountries.eu/rest/v2/all"
+        fetch(url)
+            .then(response => response.json())
+            .then(countries => {
+                const population = countries.filter(d => {
+        return d.population < 3000;
+      });
+      console.log(population);
+                for (const country of countries) {
+              
+                    let {
+                        name,
+                        capital,
+                        population,
+                    } = country   
+                    
+        }
+
+    
+      //  FILTER OUT countries whos population is smaller than...
+        const populat = countries.filter (pop =>{
+         return pop.population < 1000
+     })
+
+        console.log (populat)
+
+        const startsWithA = populat.findIndex (countr =>{
+         return countr.name[1] === 'a'? true : false
+     })
+
+        console.log (populat[startsWithA])
+
+
+     
+       /* let finland = countries.filter (function(obj){
+
+        for (key in obj){
+        if(obj[key].includes('Finland')){
+        return obj;
+    }
+}
+})
+console.log (finland)
+*/
+     var countriesArray = Object.keys (countries).map(key => {
+     return countries [key];  // CONVERT OBJECT TO ARRAY 
+
+  
+  
+})         
+   console.log(Object.keys(countries[0]))  
+
+       console.log(countriesArray.length)
+       let lastIndex = countries.length -1 
+       console.log(countries [lastIndex])
+
+       console.log (Array.isArray (countriesArray))//check if data is an array
+      console.log(countriesArray[5])
+     
+     })
+
+        
+     </script>    
+   
+   
+<script type="text/javascript" src="zemlje.js"></script>
+
+</body>
+</html>

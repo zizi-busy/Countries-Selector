@@ -11,6 +11,7 @@ html {
 
     font-weight: bold 700;
     color: #333;
+    display: block;
 }
 
 .hero-image-area {
@@ -69,6 +70,7 @@ html {
     justify-content: space-around;
 }*/
 .input_wrapper {
+    
 
     background-color: white;
     /*background-color: #fbc531;*/
@@ -77,6 +79,10 @@ html {
     margin-top: 5px;
     margin-bottom: 5px
 
+}
+.input_zone{
+    display: flex;
+    flex-direction: column;
 }
 
 .input {
@@ -105,6 +111,26 @@ html {
 
 }
 
+@media only screen and (max-width: 600px) {
+    .sortBtn {
+    margin-top: 50px;
+    }
+
+    .searchbtn {
+        margin: 0px; 
+        margin-top:-28px;
+        margin-right:-10px;   
+    }
+    .btnarea{
+      max-resolution: top 10px;
+    }
+
+  
+ 
+
+
+}
+
 .searchbtn:hover {
     background-color: #fbc531;
     box-shadow: 0px 15px 20px rgb(46, 229, 157, 0.4);
@@ -130,6 +156,8 @@ html {
     font-size: 16px;
     font-weight: bold;
     color: #fbc531;
+    width : 60px
+   
 }
 
 /* 2nd button*/
@@ -164,10 +192,11 @@ html {
     background-color: #fbc531;
     color: black;
     float: right;  
-    width: 100px;
+    width: 40px;
     height: 40px;
     text-align: center;
     border: none;
+    margin-top: 10px
     
    
 } 
@@ -187,4 +216,57 @@ h1{
 }
 h2{
     text-align: center;
+}
+.paragraph {
+    display: flex;
+}
+.text{
+    display:flex
+}
+@media only screen and (max-width: 600px) {
+    .sortBtn {
+    margin-top: 10px;
+    margin-bottom:5px
+    }
+
+    .searchbtn {
+        margin: 0px; 
+        margin-top:-28px;
+        margin-right:-10px;   
+    }
+    .searchbtn1{
+        margin: 0px; 
+        margin-top:-28px;
+        margin-right:-10px;  
+    }
+    .btnarea{
+      margin-top:  10px;
+    }
+    h1{
+     
+        font-size: 25px;
+        margin:0px
+    }
+    .countries-sort__paragraph{
+        font-size: 12px;
+        margin:0px
+
+    }
+    .paragraph{
+        font-size: 12px;
+        display:flex;
+        align-items: flex-end;
+        margin-bottom:0px;
+        margin-top: 0px
+
+       
+       
+        
+       
+    }
+
+    .text{
+        margin: 0px;
+
+    }
 }
