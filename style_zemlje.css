@@ -213,10 +213,7 @@ h2{
     display:flex
 }
 
-.btnArea{
-    
-  
-  }
+
 @media only screen and (max-width: 600px) {
     .sortBtn {
     margin-top: 10px;
@@ -240,8 +237,8 @@ h2{
         margin:0px;
         padding-bottom:20px;
         letter-spacing: 2.5;
-}
-    }
+        }
+    
     .countries-sort__paragraph{
         font-size: 12px;
        margin-top: 5px;
