@@ -7,8 +7,13 @@ const url = "https://restcountries.eu/rest/v2/all"
 fetch(url)
     .then(response => response.json()) //
     .then(countries => {
-
+      const population = countries.filter(d => {
+        return d.population < 30000;
+      });
+      console.log(population);
         searchBtn.addEventListener("click", generateCountry);
+
+     
 
         function generateCountry() { //FN to GENERATE COUNTRY
 
@@ -18,14 +23,27 @@ fetch(url)
             let countryName = document.createElement('h2')
             let countryCapital = document.createElement('p')
             let countryPopulation = document.createElement('p')
+            let countryLanguage = document.createElement ('p')
+         
             
-            countryName.textContent = country.name
-            countryCapital.textContent = country.capital           
-            countryPopulation.textContent = country.population
+            countryName.textContent =country.name 
+            countryCapital.textContent = `Capital:${  country.capital} `           
+            countryPopulation.textContent = `Population:${ country.population} `  
+           
+          
+           const langs = []
+           for(const language of country.languages){
+             langs.push(language.name)
+           }
+           countryLanguage.textContent =`Languages:${langs}` 
+            
+           
         
             div.appendChild(countryName)
             div.appendChild(countryCapital)
             div.appendChild(countryPopulation)
+            div.appendChild(countryLanguage)
+
           
             flexContainer.appendChild(div)
             
